@@ -10,13 +10,17 @@ function App() {
       method: 'GET',
       redirect: 'follow'
     };
+
+    const apiKey = process.env.REACT_APP_API_KEY;
+    console.log(apiKey);
     
     fetch(
-      "https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=25&key={MyApiKey}", 
+      `https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=25&key=${apiKey}`, 
       requestOptions
       )
       .then(response => response.json())
       .then(result => setVideos(result.items))
+      // .then(result => console.log(result))
       .catch(error => console.log('error', error));
   }, []);
   
