@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  height: 4rem;
+  padding: 0.8rem 1rem;
+  background-color: black;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: 1em;
+}
+
+.input {
+  flex-basis: 100%;
+  /* input은 항상 flexbox안에 가득 채웠으면 좋겠다. */
+  /* 너비가 가능한 만큼 채워진다. */
+  font-size: 1.2rem;
+  outline: 0;
+}
+
+.button {
+  background-color: darkgrey;
+  outline: 0;
+}
+
+.buttonImg {
+  height: 100%;
+  padding: 0.5em 0.2em;
+}
