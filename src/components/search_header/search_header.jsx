@@ -1,8 +1,8 @@
 import styles from "./search_header.module.css";
-import React, { useRef } from 'react';
+import React, { memo, useRef } from 'react';
 
 
-const Search_header = ({ onSearch }) => {
+const Search_header = memo(({ onSearch }) => {
     const inputRef = useRef();
     const handleSearch = () => {
         const value = inputRef.current.value;
@@ -35,6 +35,6 @@ const Search_header = ({ onSearch }) => {
             {/* input과 함께 쓰기 때문에 submit으로 지정 */}
         </header>
     );
-};
+});
 
 export default Search_header;
