@@ -1,11 +1,18 @@
 .container {
-  width: 50%;
   /* box-sizing이 기본적으로 content를 베이스로 되기 때문에 */
   /* 50%해도 한줄에 한개 밖에 안 나옴 */
   /* box-sizing: border-box; */
   /* 그래서 box-sizing을 border-box로 설정해주어야 한 줄에 2개가 나옴 */
   /* index.js에 광역적으로 추가 */
   padding: 0.2em;
+}
+
+.container.grid {
+  width: 50%;
+}
+
+.container.list {
+  width: 100%;
 }
 
 .video {
